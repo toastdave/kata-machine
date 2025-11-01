@@ -1,4 +1,9 @@
-// @ts-ignore
-import jest_config from "./.jest.config.json";
-
-export default jest_config;
+export default {
+    clearMocks: true,
+    moduleNameMapper: {
+        "@code/(.*)": [
+            "<rootDir>/src/day1/$1"
+        ]
+    },
+    preset: "ts-jest"
+};
